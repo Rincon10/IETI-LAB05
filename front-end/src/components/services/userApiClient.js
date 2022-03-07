@@ -1,6 +1,6 @@
 export const userApiclient = (() => {
-    /* const URL = 'https://planner-back-end.herokuapp.com'; */
-    const URL = 'http://localhost:8080';
+    const URL = 'https://planner-back-end.herokuapp.com';
+    /* const URL = 'http://localhost:8080'; */
     const myHeader = new Headers();
     myHeader.set('Content-Type', 'application/json');
     myHeader.set('Access-Control-Allow-Origin', '*');
