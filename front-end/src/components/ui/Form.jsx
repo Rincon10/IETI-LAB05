@@ -8,6 +8,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Linkcontainer from 'components/login/Linkcontainer';
 import validateInfoLogin from 'components/helpers/validateInfoLogin ';
 import useFormLogin from 'components/hooks/useFormLogin';
+import '../../assets/css/form.css';
 
 const Form = ({ bgcolor, title }) => {
     const { handleSubmit, handleChange, errors } =
@@ -46,7 +47,7 @@ const Form = ({ bgcolor, title }) => {
                     label="Password"
                     type="password"
                     id="password"
-                    onChange={handleChange}
+                    handleChange={handleChange}
                 />
                 {errors.password && <p>{errors.password}</p>}
                 <MyButton
