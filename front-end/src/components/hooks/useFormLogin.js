@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import _ from 'lodash';
+import swal from 'sweetalert';
+import { userApiclient } from 'components/services/userApiClient';
 
 const useFormLogin = (
     validateInfoLogin,
@@ -6,6 +9,24 @@ const useFormLogin = (
 ) => {
     const [data, setData] = useState(initData);
     const [errors, setErrors] = useState({});
+    const [token, setToken] = useState(null);
+
+    const login = () => {
+        userApiclient
+            .getToken()
+            .then(token => {
+                setToken(token.json());
+                window.location.href = '/home';
+            })
+            .catch(() => {
+                swal({
+                    title: 'Login',
+                    icon: 'error',
+                    text: 'Error al momento de iniciar sesión',
+                    timer: '5000',
+                });
+            });
+    };
 
     const handleChange = event => {
         const { name, value } = event.target;
@@ -16,6 +37,9 @@ const useFormLogin = (
         event.preventDefault();
         const currentErrors = await validateInfoLogin(data);
         setErrors(currentErrors);
+        if (_.isEqual({}, currentErrors)) {
+            login();
+        }
     };
 
     return { handleChange, handleSubmit, errors };
