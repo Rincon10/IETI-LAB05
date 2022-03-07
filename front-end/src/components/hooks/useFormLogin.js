@@ -13,10 +13,9 @@ const useFormLogin = (
 
     const login = () => {
         userApiclient
-            .getToken()
+            .getToken(data)
             .then(token => {
-                console.log('token', token);
-                setToken(token.json());
+                setToken(token);
                 window.location.href = '/home';
             })
             .catch(() => {
