@@ -1,1 +1,1 @@
-web: java $JAVA_OPT -Dserver.port=$PORT -cp build/classes:build/* org.ada.school.UserServiceApp
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/user-api-0.0.1-SNAPSHOT.jar
