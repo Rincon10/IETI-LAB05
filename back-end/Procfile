@@ -1,0 +1,1 @@
+web: java $JAVA_OPT -Dserver.port=$PORT -cp build/classes:build/* org.ada.school.UserServiceApp
