@@ -10,6 +10,5 @@ p {
 }
 
 a {
-    color: var(--azul) !important;
     text-decoration: none !important;
 }
