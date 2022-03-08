@@ -1,6 +1,18 @@
 # IETI-LAB05
 IETI-LAB05, ***todos los commits anteriores se encuentran en la rama MAIN***
 
+## Credenciales utilizadas para el lab
+
+### User
+```
+tokenTest33@mail.escuelaing.edu.co
+```
+
+### Password
+```
+1235678910
+```
+
 ## Hooks / React Router (Enunciado)
 
 1. Connect your login page submit button to your API Login Endpoint using **useEffect** hook and **fetch**:
