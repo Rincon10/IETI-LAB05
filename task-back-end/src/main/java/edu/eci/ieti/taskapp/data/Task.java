@@ -16,12 +16,12 @@ public class Task {
     private String dueDate;
     private String created;
 
-    public Task(){
+    public Task() {
         this.id = UUID.randomUUID().toString();
         this.created = java.time.LocalDate.now().toString();
     }
 
-    public Task(String name, String description, Status status, String assignedTo, String dueDate){
+    public Task(String name, String description, Status status, String assignedTo, String dueDate) {
         this();
         this.name = name;
         this.description = description;
@@ -30,9 +30,19 @@ public class Task {
         this.dueDate = dueDate;
     }
 
-    public Task(String id,String name, String description, Status status, String assignedTo, String dueDate ){
-        this( name,  description,  status,  assignedTo, dueDate);
+    public Task(String id, String name, String description, Status status, String assignedTo, String dueDate) {
+        this(name, description, status, assignedTo, dueDate);
         this.id = id;
+    }
+
+    public void updateTask(Task task) {
+        this.id = task.getId();
+        this.name = task.getName();
+        this.description = task.getDescription();
+        this.status = task.getStatus();
+        this.assignedTo = task.getAssignedTo();
+        this.dueDate = task.getDueDate();
+        this.created = task.getCreated();
     }
 
     public String getId() {

@@ -40,10 +40,10 @@ public class TaskController {
         }
     }
 
-    @RequestMapping(path = "/assignedTo/{id}", method = RequestMethod.GET)
-    public ResponseEntity<?> getTasksByUserId(@PathVariable String id) {
+    @RequestMapping(path = "/assignedTo/{userId}", method = RequestMethod.GET)
+    public ResponseEntity<?> getTasksByUserId(@PathVariable String userId) {
         try {
-            return new ResponseEntity<>(taskService.getTasksByUserId(id), HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(taskService.getTasksByUserId(userId), HttpStatus.ACCEPTED);
         } catch (TaskServiceException ex) {
             Logger.getLogger(TaskController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
