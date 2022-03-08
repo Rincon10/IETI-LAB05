@@ -4,12 +4,31 @@ import CardTask from './CardTask';
 import '../../assets/css/cardContainer.css';
 
 const CardContainer = ({ tasks = [], title }) => {
+    const hasTasks = tasks.length !== 0;
     return (
         <div id="myContainer">
-            <h2>{title}</h2>
-            {tasks.map(task => {
-                return <CardTask task={task} id={task.id} />;
-            })}
+            <center>
+                <h2 style={{ color: '#4b90c3' }}>{title}</h2>
+            </center>
+            {!hasTasks && (
+                <center>
+                    <h2 style={{ color: '#f00', marginTop: '20%' }}>
+                        No tasks yet
+                    </h2>
+                </center>
+            )}
+            {hasTasks &&
+                tasks.map(task => {
+                    return (
+                        <center>
+                            <CardTask
+                                task={task}
+                                key={task.id}
+                                style={{ margin: '10px' }}
+                            />
+                        </center>
+                    );
+                })}
         </div>
     );
 };
