@@ -18,7 +18,6 @@ const useFormLogin = (
         userApiclient
             .getToken(data)
             .then(token => {
-                console.log(token, 'token');
                 setToken(token);
                 updateUser();
                 window.location.href = '/home';
