@@ -42,12 +42,10 @@ const HomeScreen = () => {
                 </Container>
             </Navbar>
 
-            <div
-                style={{ display: 'flex', 'justify-content': 'space-between' }}
-            >
-                <CardContainer tasks={todo} title="TODO" />
-                <CardContainer tasks={doing} title="DOING" />
-                <CardContainer tasks={done} title="DONE" />
+            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <CardContainer tasks={todo} title="TODO" key={'todo'} />
+                <CardContainer tasks={doing} title="DOING" key={'doing'} />
+                <CardContainer tasks={done} title="DONE" key={'done'} />
             </div>
         </>
     );
