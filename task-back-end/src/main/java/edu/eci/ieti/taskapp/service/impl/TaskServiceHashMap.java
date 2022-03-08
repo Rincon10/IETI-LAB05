@@ -3,7 +3,7 @@ package edu.eci.ieti.taskapp.service.impl;
 import edu.eci.ieti.taskapp.data.Task;
 import edu.eci.ieti.taskapp.service.TaskService;
 import edu.eci.ieti.taskapp.service.TaskServiceException;
-import org.springframework.stereotype.Service;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @version 1.0 1/31/2022
  * @project taskapp
  */
-@Service
+
 public class TaskServiceHashMap implements TaskService {
     private final ConcurrentHashMap<String, Task> tasks = new ConcurrentHashMap<>();
 

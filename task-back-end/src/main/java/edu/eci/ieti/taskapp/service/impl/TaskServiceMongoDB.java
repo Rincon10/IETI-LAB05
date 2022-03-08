@@ -7,7 +7,6 @@ import edu.eci.ieti.taskapp.service.TaskServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +15,7 @@ import java.util.Optional;
  * @version 1.0 3/8/2022
  * @project taskapp
  */
-//@Service
+@Service
 public class TaskServiceMongoDB implements TaskService {
     private final TaskRepository taskRepository;
 
