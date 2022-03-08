@@ -1,5 +1,5 @@
 # IETI-LAB05
-IETI-LAB05 
+IETI-LAB05, ***todos los commits anteriores se encuentran en la rama MAIN***
 
 ## Hooks / React Router (Enunciado)
 
@@ -43,3 +43,31 @@ IETI-LAB05
 
 
 ### **Instrucciones de uso**
+
+
+## Login
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/01-login.jpg" />
+
+## Login error 
+
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/02-loginFailed.jpg" />
+
+## Main with no tasks
+
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/02.1-Main.jpg" />
+
+
+## MongoDB Tasks
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/02.2-Main.jpg" />
+
+## Main with tasks
+
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/03-Main.jpg" />
+
+## Adding new task on Insomnia
+
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/04-Main.jpg" />
+
+## Tasks Updated
+
+<img src="https://github.com/Rincon10/IETI-LAB05/blob/master/resources/img/05-Main.jpg" />
