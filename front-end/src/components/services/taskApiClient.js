@@ -22,7 +22,6 @@ export const taskApiClient = (() => {
                 headers: myHeader,
             });
             if (!response.ok) throw new Error('The response failed');
-            console.log(response);
             return response.json();
         },
     };
